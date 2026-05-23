@@ -13,67 +13,7 @@ body{
     background:#F4F8FB;
     overflow-x:hidden;
 }
-/* UNIVERSITY BAR */
 
-.university-bar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
-    position:relative;
-    z-index:20;
-}
-
-.university-info{
-    display:flex;
-    align-items:center;
-    gap:22px;
-    background:rgba(255,255,255,0.88);
-    padding:22px 30px;
-    border-radius:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    backdrop-filter:blur(10px);
-}
-
-.uob-logo{
-    width:95px;
-    height:auto;
-    object-fit:contain;
-}
-
-.uob-text h2{
-    color:#111827;
-    font-size:42px;
-    font-weight:800;
-    margin-bottom:6px;
-}
-
-.uob-text p{
-    color:#6B7280;
-    font-size:26px;
-    line-height:1.4;
-    font-weight:500;
-}
-
-@media(max-width:900px){
-
-    .university-info{
-        padding:18px 20px;
-        gap:16px;
-    }
-
-    .uob-logo{
-        width:65px;
-    }
-
-    .uob-text h2{
-        font-size:24px;
-    }
-
-    .uob-text p{
-        font-size:15px;
-    }
-}
 /* HERO */
 
 .hero{
@@ -84,22 +24,70 @@ body{
     padding:30px 8% 150px;
 }
 
+/* TOP HEADER */
+
+.top-header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    position:relative;
+    z-index:30;
+    margin-bottom:60px;
+}
+
 .navbar{
     display:flex;
+    align-items:flex-start;
     justify-content:flex-end;
-    align-items:center;
-    position:relative;
-    z-index:10;
+    padding-top:-10px;
 }
+
+.university-info{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    background:rgba(255,255,255,0.24);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.45);
+    padding:18px 28px;
+    border-radius:34px;
+    box-shadow:0 25px 50px rgba(31,53,88,0.18);
+    max-width:620px;
+}
+
+.uob-logo{
+    width:82px;
+    height:82px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.uob-text h2{
+    color:#111827;
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:6px;
+    white-space:nowrap;
+}
+
+.uob-text p{
+    color:#5A6B82;
+    font-size:17px;
+    line-height:1.45;
+    font-weight:500;
+}
+
+
 
 .menu-btn{
     display:block;
     background:white;
     color:#5CB9E8;
     border:none;
-    width:52px;
-    height:52px;
-    border-radius:16px;
+    width:58px;
+    height:58px;
+    border-radius:18px;
     font-size:30px;
     cursor:pointer;
     box-shadow:0 8px 20px rgba(0,0,0,0.12);
@@ -111,7 +99,7 @@ body{
 
 .hero-content{
     max-width:980px;
-    margin:75px auto 0;
+    margin:0 auto;
     text-align:center;
     position:relative;
     z-index:5;
@@ -125,14 +113,16 @@ body{
     padding:55px 50px;
     box-shadow:0 25px 50px rgba(31,53,88,0.18);
 }
+
 .hero-logo{
-    width:clamp(240px, 35vw, 480px);
+    width:clamp(220px, 40vw, 420px);
     height:auto;
     display:block;
     margin:0 auto 35px;
     object-fit:contain;
     filter:drop-shadow(0 12px 25px rgba(0,0,0,0.20));
 }
+
 .hero-content h1{
     color:white;
     font-size:72px;
@@ -553,6 +543,7 @@ body{
 .team-card:hover{
     transform:translateY(-8px);
 }
+
 .member-img{
     width:140px;
     height:140px;
@@ -564,12 +555,14 @@ body{
     margin:0 auto 22px;
     overflow:hidden;
 }
+
 .member-img img{
-    width:135px;
-    height:135px;
+    width:70px !important;
+    height:70px !important;
     object-fit:contain;
     display:block;
 }
+
 .team-card h3{
     color:#1F3558;
     font-size:22px;
@@ -686,8 +679,37 @@ footer p{
         padding:25px 6% 140px;
     }
 
-    .hero-content{
-        margin-top:55px;
+    .top-header{
+        gap:12px;
+        align-items:flex-start;
+        margin-bottom:45px;
+    }
+
+    .university-info{
+        padding:14px 18px;
+        gap:12px;
+        border-radius:28px;
+        max-width:calc(100% - 72px);
+    }
+
+    .uob-logo{
+        width:58px;
+        height:58px;
+    }
+
+    .uob-text h2{
+        font-size:22px;
+        white-space:normal;
+    }
+
+    .uob-text p{
+        font-size:14px;
+    }
+
+    .menu-btn{
+        width:52px;
+        height:52px;
+        font-size:28px;
     }
 
     .hero-card{
@@ -749,13 +771,4 @@ footer p{
     .tech-category-title{
         font-size:26px;
     }
-}
-.hero-logo{
-    width:clamp(220px, 40vw, 420px);
-}
-.member-img img{
-    width:70px !important;
-    height:70px !important;
-    object-fit:contain;
-    display:block;
 }
