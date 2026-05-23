@@ -13,7 +13,67 @@ body{
     background:#F4F8FB;
     overflow-x:hidden;
 }
+/* UNIVERSITY BAR */
 
+.university-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    position:relative;
+    z-index:20;
+}
+
+.university-info{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    background:rgba(255,255,255,0.88);
+    padding:22px 30px;
+    border-radius:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    backdrop-filter:blur(10px);
+}
+
+.uob-logo{
+    width:95px;
+    height:auto;
+    object-fit:contain;
+}
+
+.uob-text h2{
+    color:#111827;
+    font-size:42px;
+    font-weight:800;
+    margin-bottom:6px;
+}
+
+.uob-text p{
+    color:#6B7280;
+    font-size:26px;
+    line-height:1.4;
+    font-weight:500;
+}
+
+@media(max-width:900px){
+
+    .university-info{
+        padding:18px 20px;
+        gap:16px;
+    }
+
+    .uob-logo{
+        width:65px;
+    }
+
+    .uob-text h2{
+        font-size:24px;
+    }
+
+    .uob-text p{
+        font-size:15px;
+    }
+}
 /* HERO */
 
 .hero{
