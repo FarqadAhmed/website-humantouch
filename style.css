@@ -113,6 +113,19 @@ body{
     border-radius:20px;
     object-fit:contain;
 }
+
+
+.system-diagram-box:hover{
+    transform:translateY(-8px);
+}
+
+
+.system-diagram-box h2{
+    color:#1F3558;
+    font-size:38px;
+    font-weight:800;
+    margin-bottom:35px;
+}
 /* HERO CONTENT */
 
 .hero-content{
