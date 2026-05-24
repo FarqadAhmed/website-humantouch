@@ -21,18 +21,18 @@ body{
     background:linear-gradient(135deg,#87CEEB,#5CB9E8);
     position:relative;
     overflow:hidden;
-    padding:30px 8% 150px;
+    padding:180px 8% 150px;
 }
 
 /* TOP HEADER */
 
 .top-header{
-    position:relative;
-    margin-bottom:80px;
-}
-
-.university-bar{
-    width:100%;
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    z-index:999;
 }
 
 .university-info{
@@ -41,9 +41,7 @@ body{
     justify-content:space-between;
     gap:25px;
     width:100%;
-    max-width:980px;
-    margin:0 auto;
-    background:rgba(255,255,255,0.24);
+    background:rgba(255,255,255,0.22);
     backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,0.45);
     padding:24px 34px;
@@ -58,24 +56,24 @@ body{
 }
 
 .uob-logo{
-    width:110px;
-    height:110px;
+    width:95px;
+    height:95px;
     object-fit:contain;
     flex-shrink:0;
 }
 
 .uob-text h2{
     color:#111827;
-    font-size:52px;
+    font-size:42px;
     font-weight:800;
-    margin-bottom:10px;
+    margin-bottom:8px;
     white-space:nowrap;
 }
 
 .uob-text p{
     color:#5A6B82;
-    font-size:28px;
-    line-height:1.45;
+    font-size:21px;
+    line-height:1.5;
     font-weight:500;
 }
 
@@ -90,12 +88,158 @@ body{
     background:white;
     color:#5CB9E8;
     border:none;
-    width:78px;
-    height:78px;
-    border-radius:24px;
-    font-size:42px;
+    width:72px;
+    height:72px;
+    border-radius:22px;
+    font-size:38px;
     cursor:pointer;
     box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+    max-width:980px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+    z-index:5;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.24);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,0.45);
+    border-radius:42px;
+    padding:55px 50px;
+    box-shadow:0 25px 50px rgba(31,53,88,0.18);
+}
+
+.hero-logo{
+    width:clamp(220px, 40vw, 420px);
+    height:auto;
+    display:block;
+    margin:0 auto 35px;
+    object-fit:contain;
+    filter:drop-shadow(0 12px 25px rgba(0,0,0,0.20));
+}
+
+.subtitle{
+    color:#1F3558;
+    background:white;
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:30px;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:28px;
+}
+
+.description{
+    color:white;
+    font-size:21px;
+    line-height:1.9;
+    margin:0 auto 42px;
+    max-width:830px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:5;
+}
+
+.btn-primary{
+    background:white;
+    color:#5CB9E8;
+    padding:18px 38px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.btn-secondary{
+    background:#1F3558;
+    color:white;
+    border:2px solid #1F3558;
+    padding:18px 38px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+    transform:translateY(-5px);
+}
+
+.wave{
+    position:absolute;
+    bottom:-230px;
+    left:-10%;
+    width:120%;
+    height:300px;
+    background:white;
+    border-radius:50%;
+    z-index:1;
+    pointer-events:none;
+}
+
+/* SIDE MENU */
+
+.side-menu{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:300px;
+    height:100%;
+    background:white;
+    z-index:1000;
+    padding:100px 35px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    transition:0.4s;
+    box-shadow:-10px 0 30px rgba(0,0,0,0.15);
+}
+
+.side-menu.active{
+    right:0;
+}
+
+.side-menu a{
+    text-decoration:none;
+    color:#1F3558;
+    font-size:22px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.side-menu a:hover{
+    color:#5CB9E8;
+    transform:translateX(-5px);
+}
+
+.close-btn{
+    position:absolute;
+    top:25px;
+    right:25px;
+    background:#87CEEB;
+    color:white;
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:14px;
+    font-size:24px;
+    cursor:pointer;
 }
 
 /* SECTION HEADER */
@@ -121,6 +265,27 @@ body{
 
 .center{
     justify-content:center;
+}
+
+/* ABSTRACT */
+
+.Abstract-section{
+    width:85%;
+    margin:80px auto;
+}
+
+.abstract-box{
+    background:white;
+    padding:55px;
+    border-radius:35px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+.abstract-box p{
+    color:#455A75;
+    font-size:20px;
+    line-height:2;
+    margin-bottom:22px;
 }
 
 /* ABOUT */
@@ -526,20 +691,22 @@ footer p{
 @media(max-width:900px){
 
     .hero{
-        padding:25px 6% 140px;
+        padding:150px 6% 140px;
     }
 
     .top-header{
-        gap:12px;
-        align-items:flex-start;
-        margin-bottom:45px;
+        top:12px;
+        width:92%;
     }
 
     .university-info{
-        padding:14px 18px;
+        padding:14px 16px;
         gap:12px;
         border-radius:28px;
-        max-width:calc(100% - 72px);
+    }
+
+    .uob-left{
+        gap:12px;
     }
 
     .uob-logo{
@@ -560,15 +727,12 @@ footer p{
         width:52px;
         height:52px;
         font-size:28px;
+        border-radius:16px;
     }
 
     .hero-card{
         padding:40px 24px;
         border-radius:32px;
-    }
-
-    .hero-content h1{
-        font-size:48px;
     }
 
     .subtitle{
@@ -588,6 +752,7 @@ footer p{
         width:270px;
     }
 
+    .Abstract-section,
     .about-section,
     .features-section,
     .problem-section,
@@ -605,12 +770,14 @@ footer p{
         font-size:30px;
     }
 
+    .abstract-box,
     .about-section,
     .results-box,
     .future-box{
         padding:35px;
     }
 
+    .abstract-box p,
     .about-section p,
     .problem-section p,
     .results-box p,
